@@ -1,16 +1,36 @@
 var c = document.getElementById("console");
 
 var txt = [
-    "////4//////////////",
+    "Kick-------------9",
+  "///////////////////",
+    "Clap--------------8",
+  "///////////////////",
+    "Sample--One------7",
+  "///////////////////",
+    "Sample--Two------6",
+  "///////////////////",
+    "Sample--Three----5",
+  "///////////////////",
+    "Sample--Four-----4",
+  "///////////////////",
+    "Sample--Five-----3",
+  "///////////////////",
+    "Sample--Six------2",
+  "///////////////////",
+    "Sample--Seven----1",
+  "///////////////////",
+    "Sample--Eight----0",
+    "------------------",
+    "///////Cre8///////",
+    "-------your-------",
+    "///////song///////",
     "-------------------",
-    "///////////////////",
+    "////5//////////////",
     "-------------------",
-    "///////////////////",
-    "---------8---------",
-    "///////////////////",
+    "////7//////////////",
     "-------------------",
-    "///////////////////",
-    "----------9--------",
+    "////6//////////////",
+    "-------------------",
     "///////////////////",
     "-------------------",
     "///////////////////",
@@ -27,9 +47,9 @@ var audioFiles = {
   "2": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_R.mp3?raw=true",
   "3": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_W.mp3?raw=true",
   "4": "https://github.com/berru-g/console-play-music/blob/master/src/son/FL_HHL_Green_078_Guitars.wav?raw=true",
-  "5": "path/to/5.mp3",
-  "6": "path/to/6.mp3",
-  "7": "path/to/7.mp3",
+  "5": "https://github.com/berru-g/console-play-music/blob/master/son/MARIO.wav?raw=true",
+  "6": "https://github.com/berru-g/console-play-music/blob/master/son/SOSAD.wav?raw=true",
+  "7": "https://github.com/berru-g/console-play-music/blob/master/son/WHEEZY.wav?raw=true",
   "8": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-clap-1.wav?raw=true",
   "9": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-bass-boom-kick-hi_G_major.wav?raw=true"
 };
@@ -65,5 +85,5 @@ function updateScreen() {
         }
     }
 }
-
+//high speed 
 var intervalID = window.setInterval(updateScreen, 500);
