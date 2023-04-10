@@ -1,13 +1,19 @@
 var c = document.getElementById("console");
 
 var txt = [
-    "////0//////////////",
+    "////4//////////////",
     "-------------------",
-    "////3//////////////",
+    "///////////////////",
     "-------------------",
-    "//////////1////////",
+    "///////////////////",
+    "---------8---------",
+    "///////////////////",
     "-------------------",
-    "////2//////////////",
+    "///////////////////",
+    "----------9--------",
+    "///////////////////",
+    "-------------------",
+    "///////////////////",
     "-------------------",
   
 ];
@@ -20,7 +26,7 @@ var audioFiles = {
   "1": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_Q.mp3?raw=true",
   "2": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_R.mp3?raw=true",
   "3": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_W.mp3?raw=true",
-  "4": "path/to/4.mp3",
+  "4": "https://github.com/berru-g/console-play-music/blob/master/src/son/FL_HHL_Green_078_Guitars.wav?raw=true",
   "5": "path/to/5.mp3",
   "6": "path/to/6.mp3",
   "7": "path/to/7.mp3",
@@ -46,7 +52,10 @@ function updateScreen() {
 
     //Play audio file if number is displayed in the first line
     var num = /[0-9]/g;
-    var str = c.textContent.split("\n")[0]; //Get first line of text
+    //var str = c.textContent.split("\n")[0]; 
+  var str = c.firstElementChild.textContent;
+
+  //Get first line of text
     var match = str.match(num);
     if (match !== null) {
         var audioFile = audioFiles[match[0]];
@@ -57,4 +66,4 @@ function updateScreen() {
     }
 }
 
-var intervalID = window.setInterval(updateScreen, 400);
+var intervalID = window.setInterval(updateScreen, 500);
