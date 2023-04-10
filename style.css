@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  padding: 5vh 5vw;
-  background: #1a1a1a;
+  padding: 10vh 10vw;
+  background: #2b2d42;
   overflow: hidden;
 }
 
 .intro {
-  color: gray;
+  color: #8d99ae;
   font-family: monospace;
   font-weight: bold;
   font-size: 4.1vh;
@@ -26,18 +26,19 @@ p {
   line-height: 1;
   color: white;
 }
-
 #console {
-  width: 100%;
-  height: auto;
+width: 100%;
+height: auto;
+padding: 10vh 10vw;
 }
-
 a {
-  color: grayscale;
-  text-decoration: none;
+color: #edf2f4;
+text-decoration: none;
 }
-
+a:hover {
+color: #e9edc9;
+}
 label {
-  font-family: monospace;
-  color: whitesmoke;
+font-family: monospace;
+color: whitesmoke;
 }
