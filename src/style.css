@@ -1,0 +1,36 @@
+    body {
+        margin: 0;
+        padding: 5vh 5vw;
+        background: #1a1a1a;
+        overflow: hidden;
+    }
+    
+    .private {
+        color: whitesmoke;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 2.1vh;
+        margin-top: 0px;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    p {
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 4.1vh;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        color: white;
+    }
+#console {
+  width: 100%;
+  height: 200vh;
+}
+a {
+  color: green;
+  text-decoration: none;
+}
