@@ -20,9 +20,9 @@ var audioFiles = {
   "1": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_Q.mp3?raw=true",
   "2": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_R.mp3?raw=true",
   "3": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_W.mp3?raw=true",
-  "4": "path/to/4.mp3",
-  "5": "path/to/5.mp3",
-  "6": "path/to/6.mp3",
+  "4": "src\son\FL_HHL_Green_078_Guitars.wav",
+  "5": "src\son\FL_HHL_Green_Clap.wav",
+  "6": "src\son\FL_HHL_Green_Hihat.wav",
   "7": "path/to/7.mp3",
   "8": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-clap-1.wav?raw=true",
   "9": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-bass-boom-kick-hi_G_major.wav?raw=true"
