@@ -12,6 +12,17 @@ body {
   font-size: 4.1vh;
   margin-top: 0px;
 }
+a {
+color: #e9edc9;
+text-decoration: none;
+}
+a:hover {
+color: #edf2f4;
+}
+label {
+font-family: monospace;
+color: whitesmoke;
+}
 
 * {
   box-sizing: border-box;
@@ -26,19 +37,23 @@ p {
   line-height: 1;
   color: white;
 }
+p:first-child {
+  color: #ef233c;
+}
+p:first-child * {
+  color: black;
+}
+
+
 #console {
 width: 100%;
 height: auto;
-padding: 10vh 10vw;
+padding: 0vh 10vw;
+margin-top: 10vh;
+background-color: #1a1a1a;
+border-top: 0.1rem solid #ef233c;
 }
-a {
-color: #edf2f4;
-text-decoration: none;
+.chff {
+color: green;
 }
-a:hover {
-color: #e9edc9;
-}
-label {
-font-family: monospace;
-color: whitesmoke;
-}
+

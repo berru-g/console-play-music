@@ -1,5 +1,6 @@
 <!-- Welcome, here is a console-style MP3 or WAV file player. Just write a number between 0 and 9 on each line to read the file. Have fun! Create by github/berru-g learn js.
 -->
+
 <head>
   <meta charset="UTF-8">
   <title>Console music player</title>
@@ -7,15 +8,15 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta name=description content="Music player style console.Have a fun!">
   <meta name=author content>
-  <meta name=keywords
-    content="bianire music player, create your song">
+  <meta name=keywords content="bianire music player, create your song">
   <meta property=og:url content=https://github.com/berru-g />
   <link rel=canonical href=https://github.com/berru-g />
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-  </head>
-  <div class="intro">Welcome, here is a console-style MP3 or WAV file player. Just write a number between 0 and 9 on each line to read the file. Have fun! Play in <a href="https://codepen.io/h-lautre/pen/wvYagOB"> Codepen</a>.</div>
-<!--<div class="fader">
+</head>
+<div class="intro">Welcome, here is a MP3 or WAV file player. </br>Write in JS a <p>number between 0 and 9</p> on each
+  line to read the file. Change BPM in variable intervalID.</br>Play in <a
+    href="https://codepen.io/h-lautre/pen/wvYagOB"> Codepen</a>. Have a fun.</div><!--<div class="fader">
   <input type="range" min="100" max="1000" value="500" id="speed-fader">
   <label for="speed-fader">Bpm</label>
 </div>-->
@@ -24,92 +25,105 @@
   <script>
     var c = document.getElementById("console");
 
-var txt = [
-"Kick-------------9",
-"...................",
-"Clap-------------8",
-"...................",
-"Sample--One------1",
-"...................",
-"Sample--Two------2",
-"...................",
-"Sample--Three----3",
-"...................",
-"Sample--Four-----4",
-"...................",
-"Sample--Five-----5",
-"...................",
-"Sample--Six------6",
-"...................",
-"Sample--Seven----7",
-"...................",
-"Sample--Eight----0",
-"...................",
-"_______Cre8_______",
-"_______your_______",
-"_______song_______",
-"...................",
-"..................",
-".....3.............",
-"....5.............",
-".....4.............",
-"...................",
-"...6...............",
-"...................",
-"...................",
-"...................",
-"...................",
-  
-];
+    var txt = [
+      ".",
+      "..",
+      "...",
+      "....",
+      "Kick------------9",
+      ".................",
+      "Clap------------8",
+      ".................",
+      "Guitar--One-----1",
+      ".................",
+      "Guitar--Two-----2",
+      ".................",
+      "Guitar--Three---3",
+      ".................",
+      "Guitar--Four----4",
+      ".................",
+      "Sample--one-----5",
+      ".................",
+      "Sample--Two-----6",
+      ".................",
+      "Sample--Four----7",
+      ".................",
+      "Sample--Rick----0",
+      ".................",
+      ".................",
+      "_______Cre8______",
+      "_______your______",
+      "_______song______",
+      "....",
+      "...",
+      "..",
+      "9",
+      "9",
+      "8",
+      "9",
+      "9",
+      "9",
+      "8",
+      "7",
+      ".",
+    ];
 
-var docfrag = document.createDocumentFragment();
+    var docfrag = document.createDocumentFragment();
 
-// Define audio files for each number
-var audioFiles = {
-  "0": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_E.mp3?raw=true",
-  "1": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_Q.mp3?raw=true",
-  "2": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_R.mp3?raw=true",
-  "3": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_W.mp3?raw=true",
-  "4": ".\FL_HHL_Ride_069_Piano.wav",
-  "5": "https://github.com/berru-g/console-play-music/blob/master/son/MARIO.wav?raw=true",
-  "6": "https://github.com/berru-g/console-play-music/blob/master/son/SOSAD.wav?raw=true",
-  "7": "https://github.com/berru-g/console-play-music/blob/master/son/WHEEZY.wav?raw=true",
-  "8": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-clap-1.wav?raw=true",
-  "9": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-bass-boom-kick-hi_G_major.wav?raw=true"
-};
+    // Define audio files for each number
+    var audioFiles = {
+      "0": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Rick-sample/Awww_Bitch.wav?raw=true",
+      "1": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_Q.mp3?raw=true",
+      "2": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_R.mp3?raw=true",
+      "3": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_W.mp3?raw=true",
+      "4": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/Accords/audio_E.mp3?raw=true",
+      "5": "https://github.com/berru-g/console-play-music/blob/master/son/MARIO.wav?raw=true",
+      "6": "https://github.com/berru-g/console-play-music/blob/master/son/SOSAD.wav?raw=true",
+      "7": "https://github.com/berru-g/console-play-music/blob/master/son/WHEEZY.wav?raw=true",
+      "8": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-clap-1.wav?raw=true",
+      "9": "https://github.com/berru-g/Rick-MortySample/blob/master/PadMusical-master/public/rsc-mp3/808/808-bass-boom-kick-hi_G_major.wav?raw=true"
+    };
 
-function updateScreen() {
-    //Shuffle the "txt" array
-    txt.push(txt.shift());
-    //Rebuild document fragment
-    txt.forEach(function(e) {
+    function updateScreen() {
+      //Shuffle the "txt" array
+      txt.push(txt.shift());
+      //Rebuild document fragment
+      txt.forEach(function (e) {
         var p = document.createElement("p");
         p.textContent = e;
         docfrag.appendChild(p);
-    });
-  
-    //Clear DOM body
-    while (c.firstChild) {
+      });
+
+      //Clear DOM body
+      while (c.firstChild) {
         c.removeChild(c.firstChild);
-    }
-    c.appendChild(docfrag);
+      }
+      c.appendChild(docfrag);
 
-    //Play audio file if number is displayed in the first line
-    var num = /[0-9]/g;
-    //var str = c.textContent.split("\n")[0]; 
-  var str = c.firstElementChild.textContent;
-
-  //Get first line of text
-    var match = str.match(num);
-    if (match !== null) {
+      //Play audio file if number is displayed in the first line
+      var num = /[0-9]/g;
+      //var str = c.textContent.split("\n")[0]; 
+      var str = c.firstElementChild.textContent;
+      /*txt.forEach(function(e) {
+        var p = document.createElement("p");
+        if (/\d/.test(e)) { // Check if e contains a digit
+          p.classList.add("green"); // Add the "green" class to the element
+        }
+        p.textContent = e;
+        docfrag.appendChild(p);
+      });
+      */
+      //Get first line of text
+      var match = str.match(num);
+      if (match !== null) {
         var audioFile = audioFiles[match[0]];
         if (audioFile) {
-            var audio = new Audio(audioFile);
-            audio.play();
+          var audio = new Audio(audioFile);
+          audio.play();
         }
+      }
     }
-}
-//high speed 
-var intervalID = window.setInterval(updateScreen, 500); 
+    //control speed 
+    var intervalID = window.setInterval(updateScreen, 500);
   </script>
 </div>
